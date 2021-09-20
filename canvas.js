@@ -3,28 +3,61 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 var c = canvas.getContext('2d'); 
-c.fillStyle = 'blue';
-c.fillRect(100,100,100,100); // fillrect(x,y,width,height)
-c.fillStyle = 'black'
-c.fillRect(400,100,100,100);
-c.fillStyle = 'red';
-c.fillRect(300,300,100,100);
-console.log(canvas);
+c.fillStyle = 'white';
+c.fillRect(550,100,450,450); // fillrect(x,y,width,height)
 
 // line
 c.beginPath();
-c.moveTo(20,20);
-c.lineTo(20,100);
-c.lineTo(70,100);
+c.moveTo(700,100);
+c.lineTo(700,550);
+// c.lineTo(70,100);
+c.strokeStyle = 'red';
+c.stroke();
+
+c.beginPath();
+c.moveTo(550,100);
+c.lineTo(550,550);
+c.strokeStyle = 'red';
+c.stroke();
+
+c.beginPath();
+c.moveTo(850,100);
+c.lineTo(850,550);
+c.strokeStyle = 'red';
+c.stroke();
+
+c.beginPath();
+c.moveTo(1000,100);
+c.lineTo(1000,550);
+c.strokeStyle = 'red';
+c.stroke();
+
+c.beginPath();
+c.moveTo(1000,250);
+c.lineTo(550,250);
+c.strokeStyle = 'red';
+c.stroke();
+
+c.beginPath();
+c.moveTo(1000,400);
+c.lineTo(550,400);
+c.strokeStyle = 'red';
+c.stroke();
+
+c.beginPath();
+c.moveTo(1000,550);
+c.lineTo(550,550);
+c.strokeStyle = 'red';
+c.stroke();
+
+c.beginPath();
+c.moveTo(1000,100);
+c.lineTo(550,100);
 c.strokeStyle = 'red';
 c.stroke();
 
 
-for(let i = 0; i<100 ; i++){
-let x = Math.random() * window.innerWidth;
-let y = Math.random() * window.innerHeight; 
-c.beginPath();
-c.arc(x,y,30,120,50,true);  
-c.strokeStyle = 'blue'; 
-c.stroke();
-}
+canvas.addEventListener('mousemove',function(moved){
+    console.log(moved);
+});
+
