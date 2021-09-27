@@ -1,6 +1,8 @@
-const canvas = document.querySelector('canvas');
+function resizeCanvas() {
+    const canvas = document.querySelector('canvas');
 canvas.height = window.innerHeight;
 canvas.width = window.innerWidth;
+
 
 var c = canvas.getContext("2d");
 var x = null;
@@ -31,11 +33,6 @@ function drawBoard(){
 	c.stroke();
 	}
 }
-
-// window.addEventListener("resize", drawBoard);
-
-
-// canvas.addEventListener('mousemove',function(moved){
-// 		console.log(moved);
-// })
 drawBoard();
+
+  }
