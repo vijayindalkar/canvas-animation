@@ -9,21 +9,6 @@ var sectionSize = canvas/3;
 var x = null;
 
 
-
-function getInitialBoard (defaultValue) {
-	var board = [];
-  
-	for (var x = 0;x < 3;x++) {
-	  board.push([]);
-  
-	  for (var y = 0;y < 3;y++) {
-		board[x].push(defaultValue);
-	  }
-	}
-  
-	return board;
-  }
-
 function checkorientation(){
 	if(canvas.width > canvas.height){
 		x = canvas.height/3;
