@@ -67,35 +67,35 @@ function addPlayingPiece (mouse) {
 	}
   }
 
-  function drawO (xCordinate, yCordinate) {
-	var halfSectionSize = (0.5 * sectionSize);
-	var centerX = xCordinate + halfSectionSize;
-	var centerY = yCordinate + halfSectionSize;
-	var radius = (sectionSize - 100) / 2;
-	var startAngle = 0 * Math.PI; 
-	var endAngle = 2 * Math.PI;
+//   function drawO (xCordinate, yCordinate) {
+// 	var halfSectionSize = (0.5 * sectionSize);
+// 	var centerX = xCordinate + halfSectionSize;
+// 	var centerY = yCordinate + halfSectionSize;
+// 	var radius = (sectionSize - 100) / 2;
+// 	var startAngle = 0 * Math.PI; 
+// 	var endAngle = 2 * Math.PI;
   
-	context.lineWidth = 10;
-	context.strokeStyle = "#01bBC2";
-	context.beginPath();
-	context.arc(centerX, centerY, radius, startAngle, endAngle);
-	context.stroke();
-  }
+// 	context.lineWidth = 10;
+// 	context.strokeStyle = "#01bBC2";
+// 	context.beginPath();
+// 	context.arc(centerX, centerY, radius, startAngle, endAngle);
+// 	context.stroke();
+//   }
   
-  function drawX (xCordinate, yCordinate) {
-	context.strokeStyle = "#f1be32";
+//   function drawX (xCordinate, yCordinate) {
+// 	context.strokeStyle = "#f1be32";
   
-	context.beginPath();
+// 	context.beginPath();
 	
-	var offset = 50;
-	context.moveTo(xCordinate + offset, yCordinate + offset);
-	context.lineTo(xCordinate + sectionSize - offset, yCordinate + sectionSize - offset);
+// 	var offset = 50;
+// 	context.moveTo(xCordinate + offset, yCordinate + offset);
+// 	context.lineTo(xCordinate + sectionSize - offset, yCordinate + sectionSize - offset);
   
-	context.moveTo(xCordinate + offset, yCordinate + sectionSize - offset);
-	context.lineTo(xCordinate + sectionSize - offset, yCordinate + offset);
+// 	context.moveTo(xCordinate + offset, yCordinate + sectionSize - offset);
+// 	context.lineTo(xCordinate + sectionSize - offset, yCordinate + offset);
   
-	context.stroke();
-  }
+// 	context.stroke();
+//   }
   }
 
 
