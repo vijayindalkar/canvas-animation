@@ -96,15 +96,6 @@ function addPlayingPiece (mouse) {
   
 	context.stroke();
   }
-
-
-  function getCanvasMousePosition (event) {
-	var rect = canvas.getBoundingClientRect();
-  
-	return {	
-	  x: event.clientX - rect.left,
-	  y: event.clientY - rect.top
-	}
   }
 
 
