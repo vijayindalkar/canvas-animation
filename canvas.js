@@ -56,9 +56,7 @@ function addPlayingPiece (mouse) {
 			mouse.x >= xCordinate && mouse.x <= xCordinate + sectionSize &&
 			mouse.y >= yCordinate && mouse.y <= yCordinate + sectionSize
 		  ) {
-		  
-		  clearPlayingArea(xCordinate, yCordinate);
-  
+			
 		  if (player === 1) {
 			drawX(xCordinate, yCordinate);
 		  } else {
