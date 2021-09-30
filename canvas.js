@@ -7,6 +7,10 @@ canvas.width = window.innerWidth;
 var c = canvas.getContext("2d");
 var sectionSize = canvas/3;
 var x = null;
+var player = 1;
+
+
+
 
 
 function checkorientation(){
@@ -74,14 +78,14 @@ function addPlayingPiece (mouse) {
 	var endAngle = 2 * Math.PI;
   
 	context.lineWidth = 10;
-	context.strokeStyle = "#01037D";
+	context.strokeStyle = "#01bBC2";
 	context.beginPath();
 	context.arc(centerX, centerY, radius, startAngle, endAngle);
 	context.stroke();
   }
   
   function drawX (xCordinate, yCordinate) {
-	context.strokeStyle = "#0071dc";
+	context.strokeStyle = "#f1be32";
   
 	context.beginPath();
 	
@@ -104,3 +108,9 @@ function addPlayingPiece (mouse) {
 	  y: event.clientY - rect.top
 	}
   }
+
+
+canvas.addEventListener('mouseup', function (event) {  
+	var canvasMousePosition = getCanvasMousePosition(event);
+	addPlayingPiece(canvasMousePosition);
+  });
