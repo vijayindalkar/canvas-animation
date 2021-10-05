@@ -1,9 +1,14 @@
+
 <html>
     <head>
-        
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+
+        <link rel="Stylesheet" href="style.css">
     </head>
-    <body onload="resizeCanvas()" onresize="resizeCanvas()">
-    <canvas  width="320px" height="320px" style="background: #fff; position: absolute;"></canvas>
+    <body onload="myFunction()" onresize="myFunction()">
+    <canvas  width="320px" height="320px" style="background: #fff; position: absolute;" onmousemove="cnvs_getCoordinates(event)" ></canvas>
     <script src="canvas.js"></script>
-</body>
+    <div id="xycoordinates"></div>
+    </body>
 </html>
