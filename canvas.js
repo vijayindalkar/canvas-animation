@@ -1,16 +1,9 @@
+const canvas = document.querySelector('canvas');
 function myFunction() {
-    const canvas = document.querySelector('canvas');
 canvas.height = window.innerHeight;
 canvas.width = window.innerWidth;
 
-
 var c = canvas.getContext("2d");
-var sectionSize = canvas/3;
-var x = null;
-var player = 1;
-
-
-
 
 
 function checkorientation(){
@@ -37,69 +30,19 @@ function drawBoard(){
 	c.strokeStyle = "black";
 	c.stroke();
 	}
-}
+}	
 
 drawBoard();
 }
 
-
-function addPlayingPiece (mouse) {
-	var xCordinate;
-	var yCordinate;
-  
-	for (var x = 0;x < 3;x++) {
-	  for (var y = 0;y < 3;y++) {
-		xCordinate = x * sectionSize;
-		yCordinate = y * sectionSize;
-  
-		if (
-			mouse.x >= xCordinate && mouse.x <= xCordinate + sectionSize &&
-			mouse.y >= yCordinate && mouse.y <= yCordinate + sectionSize
-		  ) {
-			
-		  if (player === 1) {
-			drawX(xCordinate, yCordinate);
-		  } else {
-			drawO(xCordinate, yCordinate);
-		  }
-		}
-	  }
-	}
-  }
-
-//   function drawO (xCordinate, yCordinate) {
-// 	var halfSectionSize = (0.5 * sectionSize);
-// 	var centerX = xCordinate + halfSectionSize;
-// 	var centerY = yCordinate + halfSectionSize;
-// 	var radius = (sectionSize - 100) / 2;
-// 	var startAngle = 0 * Math.PI; 
-// 	var endAngle = 2 * Math.PI;
-  
-// 	context.lineWidth = 10;
-// 	context.strokeStyle = "#01bBC2";
-// 	context.beginPath();
-// 	context.arc(centerX, centerY, radius, startAngle, endAngle);
-// 	context.stroke();
-//   }
-  
-//   function drawX (xCordinate, yCordinate) {
-// 	context.strokeStyle = "#f1be32";
-  
-// 	context.beginPath();
-	
-// 	var offset = 50;
-// 	context.moveTo(xCordinate + offset, yCordinate + offset);
-// 	context.lineTo(xCordinate + sectionSize - offset, yCordinate + sectionSize - offset);
-  
-// 	context.moveTo(xCordinate + offset, yCordinate + sectionSize - offset);
-// 	context.lineTo(xCordinate + sectionSize - offset, yCordinate + offset);
-  
-// 	context.stroke();
-//   }
-  }
+function cnvs_getCoordinates(e)
+{
+var xcoord=e.clientX;
+var ycoord=e.clientY;
+console.log(xcoord + " " + ycoord)
+}
 
 
-canvas.addEventListener('mouseup', function (event) {  
-	var canvasMousePosition = getCanvasMousePosition(event);
-	addPlayingPiece(canvasMousePosition);
-  });
+function onmousemove(event) {
+	cnvs_getCoordinates(event)
+}
